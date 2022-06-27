@@ -35,10 +35,10 @@ Route::prefix('store')->group(function () {
     // SHOW selected data from database user_info in webpage
     Route::get('userInfo' , [FilesController::class, 'showUserData'])->name('userInfo');
      // SHOW selected data from database data_info in webpage
-    //Route::get('dataFile/{dataFile_id}' , [FilesController::class, 'showDataFile'])->name('alone.file.data');
+    Route::get('dataFile/{dataFile_id}' , [FilesController::class, 'showDataFile'])->name('file.data');
 
     // SHOW data data_info in webpage by alone function
-    Route::get('dataFile/{dataFile_id}' , [FilesController::class, 'showStorageDataAlone'])->name('file.data');
+   // Route::get('dataFile/{dataFile_id}' , [FilesController::class, 'showStorageDataAlone'])->name('alone.file.data');
 
     // EDIT selected data from database user_info in webpage
     Route::get('editDataFile/{alleditFile_id}' , [FilesController::class, 'editDataFile'])->name('edit.file.data');
